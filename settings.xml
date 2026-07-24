@@ -6,23 +6,23 @@
   <servers>
     <server>
       <id>nexus_snapshots</id>
-      <username>admin</username>
-      <password>Ganesh@5</password>
+      <username>nexus-username</username>
+      <password>nexus-password</password>
     </server>
     <server>
       <id>nexus_releases</id>
-      <username>admin</username>
-      <password>Ganesh@5</password>
+      <username>nexus-username</username>
+      <password>nexus-password</password>
     </server>
         <server>
         <id>nexus_central</id>
-      <username>admin</username>
-      <password>Ganesh@5</password>
+      <username>nexus-username</username>
+      <password>nexus-password</password>
     </server>
     <server>
         <id>nexus_group</id>
-      <username>admin</username>
-      <password>Ganesh@5</password>
+      <username>nexus-username</username>
+      <password>nexus-password</password>
     </server>
   </servers>
 
