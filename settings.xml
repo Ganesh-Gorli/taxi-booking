@@ -1,28 +1,28 @@
-<?xml version="1.0.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.1.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
 
   <servers>
     <server>
-      <id>${nexus_snapshots}</id>
-      <username>${NEXUS_USER}</username>
-      <password>${NEXUS_PASS}</password>
+      <id>nexus_snapshots</id>
+      <username>admin</username>
+      <password>Ganesh@5</password>
     </server>
     <server>
-      <id>${nexus_releases}</id>
-      <username>${NEXUS_USER}</username>
-      <password>${NEXUS_PASS}</password>
+      <id>nexus_releases</id>
+      <username>admin</username>
+      <password>Ganesh@5</password>
     </server>
         <server>
-        <id>${nexus_central}</id>
-      <username>${NEXUS_USER}</username>
-      <password>${NEXUS_PASS}</password>
+        <id>nexus_central</id>
+      <username>admin</username>
+      <password>Ganesh@5</password>
     </server>
     <server>
-        <id>${nexus_group}</id>
-      <username>${NEXUS_USER}</username>
-      <password>${NEXUS_PASS}</password>
+        <id>nexus_group</id>
+      <username>admin</username>
+      <password>Ganesh@5</password>
     </server>
   </servers>
 
