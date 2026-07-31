@@ -1,0 +1,14 @@
+package com.example;
+
+public final class Application {
+
+    private Application() {
+        // Prevent instantiation.
+    }
+
+    public static void main(String[] args) {
+        Greeter greeter = new Greeter();
+
+        System.out.println(greeter.greet("Taxi Booking User"));
+    }
+}

@@ -1,6 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -18,12 +21,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!-- Modules -->
     <modules>
         <module>server</module>
         <module>taxi-booking</module>
     </modules>
 
+    <!-- Nexus repositories -->
     <distributionManagement>
+
         <repository>
             <id>nexus_releases</id>
             <url>http://nexus3:8081/repository/maven-releases/</url>
@@ -33,8 +39,10 @@
             <id>nexus_snapshots</id>
             <url>http://nexus3:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
+
     </distributionManagement>
 
+    <!-- Dependency versions -->
     <dependencyManagement>
         <dependencies>
 
@@ -77,36 +85,57 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- Build configuration -->
     <build>
+
         <pluginManagement>
             <plugins>
 
+                <!-- Java Compiler -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.11.0</version>
                 </plugin>
 
+                <!-- WAR Plugin -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
                     <version>3.4.0</version>
                 </plugin>
 
+                <!-- Unit Testing -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.2.5</version>
                 </plugin>
 
+                <!-- Nexus Deployment -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>3.1.2</version>
                 </plugin>
 
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.3.0</version>
+
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <mainClass>com.example.Application</mainClass>
+                            </manifest>
+                        </archive>
+                    </configuration>
+                </plugin>
+
             </plugins>
         </pluginManagement>
+
     </build>
 
 </project>
